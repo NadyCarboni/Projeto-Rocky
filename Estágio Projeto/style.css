@@ -1,0 +1,605 @@
+@font-face {
+  font-family: Roboto;
+  src: url(./roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: Roboto-bold;
+  src: url(./roboto/Roboto-Bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+
+#navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #333;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#navbar ul li {
+  list-style: none;
+  padding: 1rem;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+#navbar ul li a {
+  color: #B0C4DE;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem 0;
+}
+
+#navbar ul li ul {
+  display: none;
+}
+
+#navbar ul li:hover {
+  background-color: #B0C4DE;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#navbar ul li:hover a {
+  color: #333;
+}
+
+#navbar ul li:hover ul {
+  z-index: 1;
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 177px;
+  margin-top: 1rem;
+}
+
+#navbar ul li:hover ul li {
+  display: block;
+  background: #f4f4f4;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+#navbar ul li:hover ul li a {
+  padding: 1rem 0;
+}
+
+#navbar ul li:hover ul li:hover {
+  background-color: #ddd;
+}
+
+#navbar .logo {
+  padding: 0 1rem;
+}
+
+#showcase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50vh;
+  background: url("./joshua-ryder-aRD43BMqAp8-unsplash.jpg") no-repeat center 70%/cover;
+  height: 60vh;
+}
+
+#showcase .bg-dark {
+  position: absolute;
+  height: 60vh;
+  background-color: #000;
+  width: 100%;
+  opacity: 0.4;
+}
+
+#showcase h1 {
+  color: #fff;
+  font-size: 5rem;
+  font-family: roboto-bold;
+  font-weight: 200;
+  z-index: 1;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+#showcase h1:hover {
+  letter-spacing: 10px;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+#showcase h3 {
+  color: #fff;
+  z-index: 1;
+  padding: 1rem;
+}
+
+#showcase a {
+  text-decoration: none;
+  background-color: #B0C4DE;
+  color: #fff;
+  font-weight: bold;
+  padding: 1rem;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+#showcase a:hover {
+  background: #8093ab;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+
+#info .info {
+  padding: 4rem;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+#info .info:nth-child(odd) {
+  background-color: #B0C4DE;
+}
+
+#info i {
+  padding: 1.5rem;
+}
+
+#info p {
+  padding: 0 2rem;
+}
+
+#tabela {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #333;
+}
+
+#tabela h2 {
+  font-size: 2rem;
+  padding: 1rem;
+  color: #fff;
+}
+
+#tabela table {
+  color: #fff;
+  padding: 0 0 1.5rem;
+}
+
+#tabela table td {
+  border: 1px solid #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+#tabela table td:nth-child(odd) {
+  font-weight: bold;
+}
+
+#tabela table tr {
+  border: 1px solid #fff;
+}
+
+#tabela table tr:nth-child(even) {
+  background-color: #8093ab;
+}
+
+#galeria {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f4f4f4;
+}
+
+#galeria h2 {
+  padding: 1rem;
+  font-size: 2rem;
+  color: #333;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#galeria ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding: 0 1rem 1rem;
+}
+
+#galeria ul li {
+  list-style: none;
+}
+
+#galeria ul li img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+#galeria ul li img:hover {
+  opacity: 0.7;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#pinguins-famosos {
+  background-color: #f4f4f4;
+}
+
+#pinguins-famosos .cabecalho {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#pinguins-famosos .cabecalho h2 {
+  position: absolute;
+  left: 48%;
+  font-size: 2rem;
+  padding-bottom: 1.5rem;
+  font-family: 'roboto-bold';
+  color: #333;
+}
+
+#pinguins-famosos .cabecalho img {
+  width: 30%;
+}
+
+#pinguins-famosos .pinguins ul {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  padding: 0 1rem 1rem;
+}
+
+#pinguins-famosos .pinguins ul li {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#pinguins-famosos .pinguins ul li span {
+  font-size: 2rem;
+}
+
+#pinguins-famosos .pinguins ul li span i {
+  display: none;
+}
+
+#pinguins-famosos .pinguins ul li p {
+  padding: 0 3rem;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+#pinguins-famosos .pinguins ul li img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+#pinguins-famosos .pinguins ul li img:hover {
+  opacity: 0.7;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 25rem;
+}
+
+footer a {
+  color: #B0C4DE;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #8093ab;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f4f4f4;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B0C4DE;
+  border: 1px solid #fff;
+}
+
+::-moz-selection {
+  background-color: #8093ab;
+  color: #fff;
+}
+
+::selection {
+  background-color: #8093ab;
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  #galeria ul {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  #info {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  #navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem 0;
+  }
+  #navbar a {
+    font-size: 0.8rem;
+  }
+  #navbar i {
+    display: none;
+  }
+  #navbar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #navbar ul li {
+    list-style: none;
+    padding: 1rem;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+  #navbar ul li a {
+    color: #B0C4DE;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1rem 0;
+  }
+  #navbar ul li ul {
+    display: none;
+  }
+  #navbar ul li:hover {
+    background-color: #B0C4DE;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  #navbar ul li:hover a {
+    color: #333;
+  }
+  #navbar ul li:hover ul {
+    z-index: 1;
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 177px;
+    margin-top: 1rem;
+  }
+  #navbar ul li:hover ul li {
+    display: block;
+    background: #f4f4f4;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+  #navbar ul li:hover ul li a {
+    padding: 1rem 0;
+  }
+  #navbar ul li:hover ul li:hover {
+    background-color: #ddd;
+  }
+  #showcase h1 {
+    padding-top: 7rem;
+    font-size: 3rem;
+  }
+  #showcase h3 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  #pinguins-famosos {
+    background-color: #f4f4f4;
+  }
+  #pinguins-famosos .cabecalho {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 10vh;
+  }
+  #pinguins-famosos .cabecalho h2 {
+    position: absolute;
+    left: 15%;
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+    font-family: 'roboto';
+    color: #333;
+  }
+  #pinguins-famosos .cabecalho img {
+    display: none;
+  }
+  #pinguins-famosos .pinguins ul {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+    padding: 0 1rem 1rem;
+  }
+  #pinguins-famosos .pinguins ul #img-1 {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #pinguins-famosos .pinguins ul #Happy-feet {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #pinguins-famosos .pinguins ul #img-2 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  #pinguins-famosos .pinguins ul #Pinguins-de-Madagascar {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  #pinguins-famosos .pinguins ul #img-3 {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #pinguins-famosos .pinguins ul #Pingu {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #pinguins-famosos .pinguins ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #pinguins-famosos .pinguins ul li span {
+    font-size: 2rem;
+    text-align: center;
+  }
+  #pinguins-famosos .pinguins ul li span i {
+    color: #8093ab;
+    padding: 0.5rem;
+    display: inline;
+    cursor: pointer;
+  }
+  #pinguins-famosos .pinguins ul li:hover p {
+    display: inline;
+    padding-bottom: 1rem;
+  }
+  #pinguins-famosos .pinguins ul li p {
+    display: none;
+  }
+}
+
+footer {
+  height: 40vh;
+  padding: 0 5rem;
+}
+/*# sourceMappingURL=style.css.map */
